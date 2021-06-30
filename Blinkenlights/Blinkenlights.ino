@@ -55,8 +55,8 @@ enum class UsbCurrentAvailable {
  
 
 // LED Matrix dimensions
-constexpr int kLedMatrixNumCols = 16;
-constexpr int kLedMatrixNumLines = 16;
+constexpr int kLedMatrixNumCols = 30;
+constexpr int kLedMatrixNumLines = 10;
 constexpr int kLedMatrixNumLeds = kLedMatrixNumCols * kLedMatrixNumLines;
 constexpr float kMatrixMaxCurrent = kLedMatrixNumLeds * 0.06f; // WS2812B: 60mA/LED
 constexpr float kMaxIdleCurrent = 0.5f; // Matrix + ESP32 idle
@@ -582,7 +582,7 @@ void AnimationInit() {
  *   --> RST
  *   <-- ACK RST
  */
-#define BUFLEN 150
+#define BUFLEN 184
 char inputBuffer[BUFLEN];
 char *bufP;
 bool lineTooLong;
